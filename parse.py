@@ -31,6 +31,12 @@ for d in data:
     else:
         asn_dct["null"].append(d)
 
+if not os.path.exists('sortAsn'):
+    os.makedirs('sortAsn')
+
+if not os.path.exists('sortCountry'):
+    os.makedirs('sortCountry')
+
 #convert to json and write to file
 for i in country_dct:
     json.dumps(i)
